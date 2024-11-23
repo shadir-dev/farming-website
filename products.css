@@ -1,0 +1,179 @@
+body {
+    background-image: url('https://images.pexels.com/photos/740135/pexels-photo-740135.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 100%; /* Ensures the body takes full viewport height */
+    margin: 0; /* Removes default body margin */
+    font-family: Arial, sans-serif; /* For clean text display */
+    color: white; /* Makes text readable over the background */
+
+}
+ 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15px 30px;
+    padding-top: 1%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 0% 10%;
+    justify-content: start;
+    
+    }
+    
+
+nav ul li {
+    position: relative;
+    
+        margin: 10% 10px; /* Equal spacing */
+    }
+    
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 100%;
+    padding: 5% 15%;
+    padding-right: 4%;
+
+    transition: all 0.3s;
+}
+nav ul li a:hover {
+    background: #00c853;
+    border-radius: 5%;
+}
+button {
+    background-color: #00c853;
+    color: #fff;
+    padding-left: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16%;
+    cursor: pointer;
+    transition: background 0.3s;
+ 
+    
+}/* Style for the footer */
+footer {
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Positions it at the bottom of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it span across the full width of the page */
+    background-color:rgba(0, 0, 0, 0.8); /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Centers the text */
+    padding: 10px 0; /* Adds some padding inside the footer */
+    font-size: 14px; /* Adjusts the font size */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+
+
+main{
+padding: 20%;
+text-align:center;
+text-justify: auto;
+}
+.gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+    color:white;
+}
+
+/* Grid layout for the gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20% 4fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+/* Individual gallery items */
+.gallery-item {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hover effect for items */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+/* Lightbox container */
+#lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* On top of everything */
+}
+
+/* Lightbox image */
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px #fff;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease; /* Smooth transition */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }

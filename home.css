@@ -1,0 +1,85 @@
+body {
+    background-image: url('https://images.pexels.com/photos/27035523/pexels-photo-27035523/free-photo-of-view-of-a-meadow-and-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=600'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 100vh; /* Ensures the body takes full viewport height */
+    margin: 0; /* Removes default body margin */
+    font-family: Arial, sans-serif; /* For clean text display */
+    color: white; /* Makes text readable over the background */
+
+}
+ 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 15px 30px;
+    padding-top: 1%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 100%;
+    padding: 5% 15%;
+    padding-right: 4%;
+
+    transition: all 0.3s;
+}
+nav ul li a:hover {
+    background: #00c853;
+    border-radius: 5%;
+}
+button {
+    background-color: #00c853;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16%;
+    cursor: pointer;
+    transition: background 0.3s;
+}/* Style for the footer */
+footer {
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Positions it at the bottom of the page */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it span across the full width of the page */
+    background-color:rgba(0, 0, 0, 0.8); /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Centers the text */
+    padding: 10px 0; /* Adds some padding inside the footer */
+    font-size: 14px; /* Adjusts the font size */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+h1 {
+text-align:center;}
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
